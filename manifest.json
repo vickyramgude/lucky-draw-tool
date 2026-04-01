@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "Lucky Draw Tool",
+  "version": "2.0",
+  "description": "Lucky Draw with AI + Wheel + YouTube & Telegram Integration",
+
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+
+  "host_permissions": [
+    "<all_urls>",
+    "https://api.openai.com/*",
+    "https://www.youtube.com/*",
+    "https://web.telegram.org/*",
+    "http://localhost:3000/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://web.telegram.org/*",
+        "<all_urls>"
+      ],
+      "js": [
+        "ai/filter.js",
+        "ai/gemini.js",
+        "content.js",
+        "wheel.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "sounds/*.mp3"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "background": {
+    "service_worker": "index.js"
+  },
+
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

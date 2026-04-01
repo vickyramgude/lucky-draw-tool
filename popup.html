@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lucky Draw</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 10px;
+      width: 260px;
+      background: #f4f6f8;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 6px;
+      margin-bottom: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: none;
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    #result {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    #preview {
+      margin-top: 10px;
+      max-height: 120px;
+      overflow-y: auto;
+      background: white;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h3>Lucky Draw</h3>
+
+  <label>Number of Winners:</label>
+  <input id="count" type="number" value="1" min="1" max="50" />
+
+  <button id="scan">Scan Page</button>
+  <button id="draw">Pick Winner(s)</button>
+
+  <div id="result"></div>
+  <div id="preview"></div>
+
+  <script src="popup.js"></script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h3>🎡 Live Giveaway</h3>
+
+  <button id="startBtn">Start Live</button>
+  <button id="spinBtn">Spin Winner</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lucky Draw</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>🎡 Lucky Draw</h2>
+
+    <div class="section">
+      <label>Number of Winners</label>
+      <input type="number" value="1" id="winnerCount" />
+      
+      <button id="scanBtn">Scan Page</button>
+      <button id="pickBtn">Pick Winner(s)</button>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section live">
+      <h3>🔴 Live Giveaway</h3>
+
+      <button id="startBtn">Start Live</button>
+      <button id="spinBtn" class="primary">Spin Winner</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

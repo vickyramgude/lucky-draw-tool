@@ -30,6 +30,7 @@
         "ai/gemini.js",
         "content.js",
         "wheel.js"
+        
       ],
       "run_at": "document_idle"
     }

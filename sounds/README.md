@@ -29,4 +29,4 @@ A smart lucky draw tool with:
 
 ---
 
-Made with ❤️ by Vicky Nagesh Ramgude
+Made with ❤️ by Vicky Nagesh Ramgude.
